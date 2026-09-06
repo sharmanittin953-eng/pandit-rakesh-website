@@ -7,9 +7,14 @@
 <title>Pandit Rakesh Ji | Satsang & Jagran</title>
 
 <meta name="description"
-content="Pandit Rakesh Ji - Satsang, Jagran, Hawan, Ramayan Path एवं धार्मिक कार्यक्रमों के लिए संपर्क करें। Near High School, Gagrote, Nowshera, Rajouri.">
+content="Pandit Rakesh Ji - Satsang, Jagran, Hawan, Ramayan Path एवं धार्मिक कार्यक्रमों के लिए संपर्क करें।">
 
 <style>
+
+/* =========================
+   BASIC
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -20,23 +25,43 @@ content="Pandit Rakesh Ji - Satsang, Jagran, Hawan, Ramayan Path एवं ध�
 body{
     font-family:Arial,"Noto Sans Devanagari",sans-serif;
     background:#fffaf0;
-    color:#4b2008;
-    line-height:1.6;
+    color:#4a2108;
+    line-height:1.5;
 }
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+}
+
+section{
+    padding:55px 0;
+}
+
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:#641d03;
-    box-shadow:0 3px 15px #0004;
+    background:#641b02;
+    box-shadow:0 3px 15px rgba(0,0,0,.25);
 }
 
 .nav{
     max-width:1200px;
-    margin:auto;
     min-height:65px;
+    margin:auto;
     padding:0 20px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -44,116 +69,179 @@ header{
 
 .logo{
     color:white;
-    font-size:25px;
+    font-size:23px;
     font-weight:bold;
 }
 
 .logo span{
-    color:#ffb300;
+    color:#ffb52e;
 }
 
 nav{
     display:flex;
-    gap:27px;
+    gap:25px;
 }
 
 nav a{
     color:white;
-    text-decoration:none;
+    font-size:15px;
     font-weight:bold;
+    transition:.3s;
 }
 
 nav a:hover{
-    color:#ffb300;
+    color:#ffb52e;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
-    max-width:1450px;
-    margin:auto;
+    min-height:500px;
+
     display:grid;
     grid-template-columns:48% 52%;
-    min-height:510px;
-    background:linear-gradient(110deg,#fff5d9,#ffe6a6);
+
+    background:
+    radial-gradient(circle at 80% 20%,#fff5ce,#ffe9ad 45%,#fff3ce);
+
+    overflow:hidden;
 }
 
+
+/* PHOTO */
+
 .hero-photo{
-    min-height:510px;
+    min-height:500px;
+    position:relative;
     overflow:hidden;
 }
 
 .hero-photo img{
     width:100%;
     height:100%;
-    object-fit:cover;
-    object-position:center 25%;
     display:block;
+
+    object-fit:cover;
+
+    /* Face ko upar/center ke paas rakhta hai */
+    object-position:center 25%;
 }
+
+
+/* हल्का edge effect */
+
+.hero-photo:after{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:100px;
+    height:100%;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(255,239,194,.9)
+    );
+}
+
+
+/* HERO CONTENT */
 
 .hero-content{
     display:flex;
     flex-direction:column;
     justify-content:center;
-    padding:45px 55px;
+
+    padding:35px 45px;
 }
 
 .jai{
     text-align:center;
-    color:#a12c00;
-    font-size:22px;
+    color:#a63105;
+    font-size:20px;
     font-weight:bold;
+    margin-bottom:4px;
 }
 
 .hero h1{
     text-align:center;
-    color:#751d00;
-    font-size:55px;
-    margin:8px 0 15px;
+    color:#761f00;
+    font-size:50px;
+    line-height:1.15;
+    margin-bottom:10px;
 }
 
 .tag{
-    max-width:500px;
-    margin:auto;
-    background:#b71805;
+    width:max-content;
+    max-width:100%;
+    margin:0 auto 10px;
+
+    padding:8px 20px;
+
+    background:#b71905;
     color:white;
+
     border-radius:30px;
-    padding:9px 20px;
-    text-align:center;
-    font-size:18px;
+
+    font-size:17px;
     font-weight:bold;
+    text-align:center;
 }
 
 .hero-text{
     text-align:center;
-    font-size:18px;
-    margin:15px 0;
+    font-size:17px;
+    margin-bottom:10px;
 }
 
 .location{
     display:flex;
     justify-content:center;
+    align-items:flex-start;
+
     gap:8px;
-    margin-bottom:22px;
+
     font-size:16px;
+    margin-bottom:15px;
 }
+
+.location-icon{
+    font-size:22px;
+}
+
+.location b{
+    color:#4b2108;
+}
+
+
+/* HERO BUTTONS */
 
 .action-buttons{
     display:flex;
     justify-content:center;
-    gap:12px;
+    gap:10px;
     flex-wrap:wrap;
 }
 
 .btn{
-    display:inline-block;
-    padding:12px 20px;
+    min-width:135px;
+
+    padding:11px 18px;
+
     border-radius:30px;
-    text-decoration:none;
+
     color:white;
+    font-size:15px;
     font-weight:bold;
-    min-width:140px;
+
     text-align:center;
-    box-shadow:0 5px 12px #0002;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.18);
+
     transition:.3s;
 }
 
@@ -166,7 +254,7 @@ nav a:hover{
 }
 
 .call{
-    background:#dc2020;
+    background:#e51b23;
 }
 
 .facebook{
@@ -179,36 +267,37 @@ nav a:hover{
     border:1px solid #ddd;
 }
 
-/* SECTIONS */
-section{
-    padding:55px 20px;
-}
 
-.container{
-    max-width:1150px;
-    margin:auto;
-}
+/* =========================
+   SECTION HEADING
+========================= */
 
 .heading{
     text-align:center;
-    margin-bottom:35px;
+    margin-bottom:32px;
 }
 
 .heading small{
-    color:#c04b00;
+    color:#bd4700;
     font-weight:bold;
+    font-size:15px;
 }
 
 .heading h2{
-    color:#831f00;
-    font-size:37px;
+    color:#821f00;
+    font-size:36px;
+    margin:3px 0;
 }
 
 .heading p{
-    margin-top:5px;
+    color:#68401f;
 }
 
-/* SERVICES */
+
+/* =========================
+   SERVICES
+========================= */
+
 .services{
     background:#fffdf8;
 }
@@ -221,52 +310,74 @@ section{
 
 .service{
     background:white;
-    border:1px solid #f0cf98;
+
+    border:1px solid #f0d09b;
     border-radius:16px;
-    padding:27px 15px;
+
+    padding:25px 15px;
+
     text-align:center;
-    box-shadow:0 6px 18px #68270012;
+
+    box-shadow:0 5px 15px rgba(90,30,0,.08);
+
     transition:.3s;
 }
 
 .service:hover{
-    transform:translateY(-7px);
+    transform:translateY(-6px);
 }
 
 .service-icon{
-    width:65px;
-    height:65px;
+    width:62px;
+    height:62px;
+
     margin:auto;
-    border-radius:50%;
-    background:#f5a313;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:32px;
+
+    border-radius:50%;
+
+    background:#f3a20b;
+
+    font-size:30px;
 }
 
 .service h3{
-    color:#8c2500;
-    margin:10px 0 5px;
+    color:#8d2700;
+    margin:10px 0 4px;
 }
 
-/* ABOUT */
+.service p{
+    font-size:14px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
 .about{
-    background:linear-gradient(110deg,#ffedc6,#fff9e9);
+    background:linear-gradient(110deg,#ffedc7,#fff9e9);
 }
 
 .about-grid{
     display:grid;
-    grid-template-columns:30% 45% 25%;
-    gap:25px;
+    grid-template-columns:280px 1fr 200px;
+
+    gap:30px;
+
     align-items:center;
 }
 
 .about-photo{
-    border:4px solid #f09b00;
-    border-radius:15px;
     overflow:hidden;
-    box-shadow:0 8px 20px #0002;
+
+    border:4px solid #ed9d00;
+    border-radius:16px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
 }
 
 .about-photo img{
@@ -275,39 +386,54 @@ section{
 }
 
 .about-text h2{
-    color:#842000;
-    font-size:32px;
-    margin-bottom:12px;
+    color:#812000;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.about-text p{
+    margin-bottom:10px;
 }
 
 .points{
     list-style:none;
-    margin-top:12px;
+    margin-top:10px;
 }
 
 .points li{
-    margin:8px 0;
+    margin:7px 0;
     font-weight:bold;
 }
 
 .points li:before{
     content:"✓";
+
     display:inline-flex;
-    justify-content:center;
+
+    width:21px;
+    height:21px;
+
     align-items:center;
-    background:#f59e0b;
-    color:white;
-    width:22px;
-    height:22px;
-    border-radius:50%;
+    justify-content:center;
+
     margin-right:8px;
+
+    color:white;
+    background:#f39a08;
+
+    border-radius:50%;
 }
 
 .om{
     text-align:center;
+
+    color:#b53b00;
+
     font-family:serif;
-    font-size:120px;
-    color:#b83a00;
+
+    font-size:115px;
+
+    line-height:1;
 }
 
 .quote{
@@ -315,7 +441,11 @@ section{
     font-weight:bold;
 }
 
-/* PROGRAMS */
+
+/* =========================
+   PROGRAMS
+========================= */
+
 .programs{
     background:white;
 }
@@ -327,59 +457,94 @@ section{
 }
 
 .program{
-    border:1px solid #efd0a0;
+    padding:22px 15px;
+
     background:#fff8ed;
+
+    border:1px solid #efd09d;
+
     border-radius:15px;
-    padding:20px;
+
     text-align:center;
+
+    transition:.3s;
+}
+
+.program:hover{
+    transform:translateY(-5px);
 }
 
 .program-icon{
-    font-size:40px;
+    font-size:38px;
+    margin-bottom:5px;
 }
 
 .program h3{
-    color:#9b3000;
+    color:#942900;
 }
 
-/* GALLERY */
+
+/* =========================
+   GALLERY
+========================= */
+
 .gallery{
-    background:#fff4df;
+    background:#fff2dc;
 }
 
 .gallery-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:15px;
+    gap:18px;
 }
 
 .gallery-card{
-    background:white;
-    border-radius:15px;
     overflow:hidden;
-    border:3px solid white;
-    box-shadow:0 5px 15px #0002;
+
+    background:white;
+
+    border-radius:16px;
+
+    box-shadow:0 6px 18px rgba(70,30,0,.15);
+
     transition:.3s;
 }
 
 .gallery-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-6px);
 }
 
 .gallery-card img{
     width:100%;
-    height:220px;
-    object-fit:cover;
+    height:230px;
+
     display:block;
+
+    object-fit:cover;
+
+    transition:.4s;
 }
 
-.gallery-card h3{
+.gallery-card:hover img{
+    transform:scale(1.05);
+}
+
+.gallery-title{
+    padding:12px;
+
     text-align:center;
-    padding:10px;
-    color:#8c2500;
+
+    color:#8b2600;
+
+    font-size:18px;
+    font-weight:bold;
 }
 
-/* WHY */
+
+/* =========================
+   WHY
+========================= */
+
 .why{
     background:white;
 }
@@ -387,7 +552,7 @@ section{
 .why-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:20px;
 }
 
 .why-card{
@@ -396,16 +561,21 @@ section{
 }
 
 .big{
-    font-size:45px;
+    font-size:43px;
 }
 
 .why-card h3{
-    color:#8e2700;
+    color:#8d2800;
+    margin:6px 0;
 }
 
-/* CONTACT */
+
+/* =========================
+   CONTACT
+========================= */
+
 .contact{
-    background:linear-gradient(135deg,#720f00,#a51e00);
+    background:linear-gradient(135deg,#711000,#a51f00);
     color:white;
 }
 
@@ -423,88 +593,134 @@ section{
 
 .contact-card{
     background:white;
-    color:#421500;
-    border-radius:15px;
-    padding:22px 12px;
+    color:#421700;
+
+    border-radius:16px;
+
+    padding:23px 12px;
+
     text-align:center;
 }
 
 .contact-card .icon{
     font-size:40px;
+    margin-bottom:5px;
 }
 
 .contact-card h3{
-    margin:5px 0;
+    margin-bottom:5px;
 }
 
 .contact-card a{
     display:inline-block;
+
     margin-top:10px;
+
     padding:9px 16px;
-    border-radius:20px;
-    text-decoration:none;
+
+    border-radius:25px;
+
     color:white;
+
     font-weight:bold;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
-    background:#390e02;
-    color:#e8c5a4;
+    background:#380d02;
+
+    color:#dcb99d;
+
     text-align:center;
+
     padding:30px 15px;
 }
 
 .footer-name{
     color:white;
+
     font-size:23px;
     font-weight:bold;
 }
 
 .footer-icons{
     display:flex;
+
     justify-content:center;
-    gap:14px;
+
+    gap:12px;
+
     margin:15px 0;
 }
 
 .footer-icons a{
     width:55px;
     height:55px;
-    border-radius:50%;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
+    border-radius:50%;
+
     color:white;
-    text-decoration:none;
+
     font-size:25px;
 }
 
-/* FLOATING WHATSAPP */
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
 .float-wa{
     position:fixed;
+
     right:20px;
     bottom:20px;
+
     width:60px;
     height:60px;
-    border-radius:50%;
-    background:#25d366;
-    color:white;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
-    font-size:30px;
-    text-decoration:none;
+
+    background:#25d366;
+
+    color:white;
+
+    border-radius:50%;
+
+    font-size:29px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+
     z-index:2000;
-    box-shadow:0 5px 20px #0005;
+
+    transition:.3s;
 }
 
-/* MOBILE */
+.float-wa:hover{
+    transform:scale(1.08);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
 @media(max-width:900px){
 
     .nav{
         flex-direction:column;
-        padding:12px;
+        padding:12px 10px;
         gap:8px;
     }
 
@@ -521,12 +737,16 @@ footer{
     }
 
     .hero-photo{
-        height:430px;
-        min-height:430px;
+        height:420px;
+        min-height:420px;
+    }
+
+    .hero-photo:after{
+        display:none;
     }
 
     .hero-content{
-        padding:40px 20px;
+        padding:32px 20px;
     }
 
     .service-grid{
@@ -535,11 +755,18 @@ footer{
 
     .about-grid{
         grid-template-columns:1fr;
+        text-align:center;
     }
 
     .about-photo{
-        max-width:400px;
+        width:300px;
+        max-width:100%;
         margin:auto;
+    }
+
+    .points{
+        display:inline-block;
+        text-align:left;
     }
 
     .program-grid{
@@ -559,48 +786,168 @@ footer{
     }
 }
 
+
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:600px){
+
+    section{
+        padding:42px 0;
+    }
 
     .logo{
         font-size:20px;
     }
 
-    .hero h1{
-        font-size:40px;
+    nav{
+        gap:10px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:11px;
     }
 
     .hero-photo{
-        height:390px;
-        min-height:390px;
+        height:370px;
+        min-height:370px;
     }
 
-    .service-grid,
-    .program-grid,
-    .gallery-grid,
-    .contact-grid{
+    .hero-content{
+        padding:28px 15px;
+        gap:0;
+    }
+
+    .jai{
+        font-size:18px;
+    }
+
+    .hero h1{
+        font-size:39px;
+        margin-bottom:8px;
+    }
+
+    .tag{
+        font-size:14px;
+        padding:8px 15px;
+        margin-bottom:8px;
+    }
+
+    .hero-text{
+        font-size:15px;
+        margin-bottom:8px;
+    }
+
+    .location{
+        font-size:14px;
+        margin-bottom:12px;
+    }
+
+    .btn{
+        min-width:125px;
+        padding:10px 14px;
+        font-size:13px;
+    }
+
+    .heading h2{
+        font-size:29px;
+    }
+
+    .service-grid{
         grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .service{
+        padding:20px 10px;
+    }
+
+    .service-icon{
+        width:55px;
+        height:55px;
+        font-size:27px;
+    }
+
+    .service h3{
+        font-size:17px;
+    }
+
+    .service p{
+        font-size:13px;
+    }
+
+    .program-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .program{
+        padding:18px 8px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
     }
 
     .gallery-card img{
         height:170px;
     }
 
-    .heading h2{
-        font-size:30px;
+    .gallery-title{
+        font-size:15px;
+        padding:9px 5px;
     }
 
-    .btn{
-        min-width:130px;
+    .contact-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .contact-card{
+        padding:18px 7px;
+    }
+
+    .contact-card .icon{
+        font-size:32px;
+    }
+
+    .contact-card h3{
+        font-size:16px;
+    }
+
+    .contact-card p{
         font-size:13px;
     }
+
+    .om{
+        font-size:90px;
+    }
+
+    .float-wa{
+        width:55px;
+        height:55px;
+        right:15px;
+        bottom:15px;
+    }
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- HEADER -->
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
 <div class="nav">
 
 <div class="logo">
@@ -617,21 +964,41 @@ footer{
 </nav>
 
 </div>
+
 </header>
 
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero" id="home">
 
+
+<!-- Pandit Ji Photo -->
+
 <div class="hero-photo">
-<img src="pandit-rakesh.jpg" alt="Pandit Rakesh Ji">
+
+<img
+src="pandit-rakesh.jpg"
+alt="Pandit Rakesh Ji">
+
 </div>
+
+
+
+<!-- Hero Information -->
 
 <div class="hero-content">
 
-<div class="jai">॥ जय श्री राम ॥</div>
+<div class="jai">
+॥ जय श्री राम ॥
+</div>
 
-<h1>पंडित राकेश जी</h1>
+<h1>
+पंडित राकेश जी
+</h1>
 
 <div class="tag">
 सत्संग, जागरण, हवन, रामायण पाठ
@@ -641,95 +1008,193 @@ footer{
 एवं अन्य धार्मिक कार्यक्रमों के लिए संपर्क करें।
 </p>
 
+
 <div class="location">
-<span>📍</span>
+
+<div class="location-icon">
+📍
+</div>
+
 <div>
 <b>Near High School, Gagrote</b><br>
 Nowshera, Rajouri, Jammu & Kashmir
 </div>
+
 </div>
+
 
 <div class="action-buttons">
 
-<a class="btn whatsapp"
+<a
+class="btn whatsapp"
 href="https://wa.me/919596619780"
 target="_blank">
+
 💬 WhatsApp
+
 </a>
 
-<a class="btn call"
+
+<a
+class="btn call"
 href="tel:9596619780">
+
 📞 Call करें
+
 </a>
 
-<a class="btn facebook"
+
+<a
+class="btn facebook"
 href="https://www.facebook.com/share/1GN4spj3GK/"
 target="_blank">
+
 f Facebook
+
 </a>
 
 </div>
 
 </div>
+
 </section>
 
 
-<!-- SERVICES -->
+
+<!-- =========================
+     SERVICES
+========================= -->
+
 <section class="services" id="services">
 
 <div class="container">
 
 <div class="heading">
-<small>हमारी सेवाएं</small>
-<h2>धार्मिक सेवाएं</h2>
-<p>धार्मिक एवं आध्यात्मिक कार्यक्रमों के लिए संपर्क करें।</p>
+
+<small>
+हमारी सेवाएं
+</small>
+
+<h2>
+धार्मिक सेवाएं
+</h2>
+
+<p>
+धार्मिक एवं आध्यात्मिक कार्यक्रमों के लिए संपर्क करें।
+</p>
+
 </div>
+
 
 <div class="service-grid">
 
-<div class="service">
-<div class="service-icon">🙏</div>
-<h3>सत्संग</h3>
-<p>भक्ति, आध्यात्मिक ज्ञान एवं सत्संग कार्यक्रम।</p>
-</div>
 
 <div class="service">
-<div class="service-icon">🪔</div>
-<h3>जागरण</h3>
-<p>भजन, कीर्तन एवं धार्मिक जागरण कार्यक्रम।</p>
+
+<div class="service-icon">
+🙏
 </div>
+
+<h3>
+सत्संग
+</h3>
+
+<p>
+भक्ति, आध्यात्मिक ज्ञान एवं सत्संग कार्यक्रम।
+</p>
+
+</div>
+
+
 
 <div class="service">
-<div class="service-icon">🔥</div>
-<h3>हवन</h3>
-<p>धार्मिक विधि-विधान के अनुसार हवन कार्यक्रम।</p>
+
+<div class="service-icon">
+🪔
 </div>
+
+<h3>
+जागरण
+</h3>
+
+<p>
+भजन, कीर्तन एवं धार्मिक जागरण कार्यक्रम।
+</p>
+
+</div>
+
+
 
 <div class="service">
-<div class="service-icon">📖</div>
-<h3>रामायण पाठ</h3>
-<p>श्री रामायण पाठ एवं धार्मिक आयोजन।</p>
+
+<div class="service-icon">
+🔥
+</div>
+
+<h3>
+हवन
+</h3>
+
+<p>
+धार्मिक विधि-विधान के अनुसार हवन कार्यक्रम।
+</p>
+
+</div>
+
+
+
+<div class="service">
+
+<div class="service-icon">
+📖
+</div>
+
+<h3>
+रामायण पाठ
+</h3>
+
+<p>
+श्री रामायण पाठ एवं धार्मिक आयोजन।
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<!-- ABOUT -->
+
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section class="about" id="about">
 
 <div class="container">
 
+
 <div class="about-grid">
 
+
 <div class="about-photo">
-<img src="pandit-rakesh.jpg" alt="Pandit Rakesh Ji">
+
+<img
+src="pandit-rakesh.jpg"
+alt="Pandit Rakesh Ji">
+
 </div>
+
+
 
 <div class="about-text">
 
-<h2>पंडित राकेश जी के बारे में</h2>
+<h2>
+पंडित राकेश जी के बारे में
+</h2>
 
 <p>
 धार्मिक एवं आध्यात्मिक कार्यक्रमों के लिए समर्पित सेवाएं।
@@ -739,157 +1204,390 @@ f Facebook
 सत्संग, जागरण, हवन और रामायण पाठ जैसे धार्मिक कार्यक्रमों के लिए संपर्क किया जा सकता है।
 </p>
 
+
 <ul class="points">
-<li>धार्मिक कार्यक्रम</li>
-<li>सत्संग एवं भजन</li>
-<li>जागरण एवं कीर्तन</li>
-<li>हवन एवं रामायण पाठ</li>
+
+<li>
+धार्मिक कार्यक्रम
+</li>
+
+<li>
+सत्संग एवं भजन
+</li>
+
+<li>
+जागरण एवं कीर्तन
+</li>
+
+<li>
+हवन एवं रामायण पाठ
+</li>
+
 </ul>
 
 </div>
 
+
+
 <div>
-<div class="om">ॐ</div>
-<p class="quote">“भक्ति और सेवा ही जीवन का आधार है।”</p>
+
+<div class="om">
+ॐ
+</div>
+
+<p class="quote">
+“भक्ति और सेवा ही जीवन का आधार है।”
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<!-- PROGRAMS -->
+
+<!-- =========================
+     PROGRAMS
+========================= -->
+
 <section class="programs" id="programs">
 
 <div class="container">
 
+
 <div class="heading">
-<small>कार्यक्रम</small>
-<h2>धार्मिक आयोजन</h2>
-<p>अपने धार्मिक कार्यक्रम के लिए आज ही संपर्क करें।</p>
+
+<small>
+कार्यक्रम
+</small>
+
+<h2>
+धार्मिक आयोजन
+</h2>
+
+<p>
+अपने धार्मिक कार्यक्रम के लिए आज ही संपर्क करें।
+</p>
+
 </div>
+
+
 
 <div class="program-grid">
 
-<div class="program">
-<div class="program-icon">🙏</div>
-<h3>सत्संग</h3>
-<p>आध्यात्मिक वातावरण, भजन एवं सत्संग।</p>
-</div>
 
 <div class="program">
-<div class="program-icon">🪔</div>
-<h3>जागरण</h3>
-<p>धार्मिक जागरण, भजन एवं कीर्तन।</p>
+
+<div class="program-icon">
+🙏
 </div>
+
+<h3>
+सत्संग
+</h3>
+
+<p>
+भजन एवं आध्यात्मिक सत्संग।
+</p>
+
+</div>
+
+
 
 <div class="program">
-<div class="program-icon">🔥</div>
-<h3>हवन</h3>
-<p>धार्मिक विधि-विधान के अनुसार हवन।</p>
+
+<div class="program-icon">
+🪔
 </div>
+
+<h3>
+जागरण
+</h3>
+
+<p>
+धार्मिक जागरण एवं कीर्तन।
+</p>
+
+</div>
+
+
 
 <div class="program">
-<div class="program-icon">📖</div>
-<h3>रामायण पाठ</h3>
-<p>रामायण पाठ एवं धार्मिक आयोजन।</p>
+
+<div class="program-icon">
+🔥
+</div>
+
+<h3>
+हवन
+</h3>
+
+<p>
+धार्मिक विधि-विधान के अनुसार हवन।
+</p>
+
+</div>
+
+
+
+<div class="program">
+
+<div class="program-icon">
+📖
+</div>
+
+<h3>
+रामायण पाठ
+</h3>
+
+<p>
+रामायण पाठ एवं धार्मिक आयोजन।
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<!-- GALLERY -->
+
+<!-- =========================
+     GALLERY
+========================= -->
+
 <section class="gallery" id="gallery">
 
 <div class="container">
 
+
 <div class="heading">
-<small>गैलरी</small>
-<h2>धार्मिक झलकियां</h2>
-<p>सत्संग एवं धार्मिक कार्यक्रमों की कुछ झलकियां।</p>
+
+<small>
+गैलरी
+</small>
+
+<h2>
+धार्मिक झलकियां
+</h2>
+
+<p>
+सत्संग एवं धार्मिक कार्यक्रमों की कुछ झलकियां।
+</p>
+
 </div>
+
+
 
 <div class="gallery-grid">
 
-<div class="gallery-card">
-<img src="satsang.jpg" alt="Satsang">
-<h3>🙏 सत्संग</h3>
-</div>
+
+<!-- SATSANG -->
 
 <div class="gallery-card">
-<img src="jagran.jpg" alt="Jagran">
-<h3>🪔 जागरण</h3>
-</div>
 
-<div class="gallery-card">
-<img src="hawan.jpg" alt="Hawan">
-<h3>🔥 हवन</h3>
-</div>
+<img
+src="satsang.jpg"
+alt="Satsang">
 
-<div class="gallery-card">
-<img src="ramayan.jpg" alt="Ramayan Path">
-<h3>📖 रामायण पाठ</h3>
+<div class="gallery-title">
+🙏 सत्संग
 </div>
 
 </div>
+
+
+
+<!-- JAGRAN -->
+
+<div class="gallery-card">
+
+<img
+src="jagran.jpg"
+alt="Jagran">
+
+<div class="gallery-title">
+🪔 जागरण
 </div>
+
+</div>
+
+
+
+<!-- HAWAN -->
+
+<div class="gallery-card">
+
+<img
+src="hawan.jpg"
+alt="Hawan">
+
+<div class="gallery-title">
+🔥 हवन
+</div>
+
+</div>
+
+
+
+<!-- RAMAYAN -->
+
+<div class="gallery-card">
+
+<img
+src="ramayan.jpg"
+alt="Ramayan Path">
+
+<div class="gallery-title">
+📖 रामायण पाठ
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- WHY -->
+
+<!-- =========================
+     WHY
+========================= -->
+
 <section class="why">
 
 <div class="container">
 
+
 <div class="heading">
-<small>क्यों संपर्क करें</small>
-<h2>हमारी विशेषताएं</h2>
+
+<small>
+हमारी विशेषताएं
+</small>
+
+<h2>
+क्यों संपर्क करें
+</h2>
+
 </div>
+
+
 
 <div class="why-grid">
 
-<div class="why-card">
-<div class="big">🙏</div>
-<h3>धार्मिक भावना</h3>
-<p>कार्यक्रमों में भक्ति और आध्यात्मिक वातावरण।</p>
-</div>
 
 <div class="why-card">
-<div class="big">🪔</div>
-<h3>विभिन्न आयोजन</h3>
-<p>सत्संग, जागरण, हवन एवं रामायण पाठ।</p>
+
+<div class="big">
+🙏
 </div>
+
+<h3>
+धार्मिक भावना
+</h3>
+
+<p>
+कार्यक्रमों में भक्ति और आध्यात्मिक वातावरण।
+</p>
+
+</div>
+
+
 
 <div class="why-card">
-<div class="big">📞</div>
-<h3>आसान संपर्क</h3>
-<p>WhatsApp या फोन के माध्यम से सीधे संपर्क करें।</p>
+
+<div class="big">
+🪔
+</div>
+
+<h3>
+विभिन्न आयोजन
+</h3>
+
+<p>
+सत्संग, जागरण, हवन एवं रामायण पाठ।
+</p>
+
+</div>
+
+
+
+<div class="why-card">
+
+<div class="big">
+📞
+</div>
+
+<h3>
+आसान संपर्क
+</h3>
+
+<p>
+WhatsApp या फोन के माध्यम से सीधे संपर्क करें।
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<!-- CONTACT -->
+
+<!-- =========================
+     CONTACT
+========================= -->
+
 <section class="contact" id="contact">
 
 <div class="container">
 
+
 <div class="heading">
-<small>Contact</small>
-<h2>संपर्क करें</h2>
-<p>धार्मिक कार्यक्रम के लिए आज ही संपर्क करें।</p>
+
+<small>
+Contact
+</small>
+
+<h2>
+संपर्क करें
+</h2>
+
+<p>
+धार्मिक कार्यक्रम के लिए आज ही संपर्क करें।
+</p>
+
 </div>
+
+
 
 <div class="contact-grid">
 
+
+<!-- LOCATION -->
+
 <div class="contact-card">
 
-<div class="icon">📍</div>
-<h3>स्थान</h3>
+<div class="icon">
+📍
+</div>
+
+<h3>
+स्थान
+</h3>
 
 <p>
 Near High School, Gagrote<br>
@@ -897,113 +1595,188 @@ Nowshera, Rajouri<br>
 Jammu & Kashmir
 </p>
 
-<a class="maps"
+<a
+class="maps"
 href="https://www.google.com/maps/search/?api=1&query=High+School+Gagrote+Nowshera+Rajouri"
 target="_blank">
-🗺️ Google Maps
+
+🗺️ Maps
+
 </a>
 
 </div>
 
 
+
+<!-- CALL -->
+
 <div class="contact-card">
 
-<div class="icon">📞</div>
-<h3>Phone</h3>
+<div class="icon">
+📞
+</div>
 
-<p>9596619780</p>
+<h3>
+Phone
+</h3>
 
-<a class="call" href="tel:9596619780">
+<p>
+9596619780
+</p>
+
+<a
+class="call"
+href="tel:9596619780">
+
 Call Now
+
 </a>
 
 </div>
 
 
+
+<!-- WHATSAPP -->
+
 <div class="contact-card">
 
-<div class="icon">💬</div>
-<h3>WhatsApp</h3>
+<div class="icon">
+💬
+</div>
 
-<p>9596619780</p>
+<h3>
+WhatsApp
+</h3>
 
-<a class="whatsapp"
+<p>
+9596619780
+</p>
+
+<a
+class="whatsapp"
 href="https://wa.me/919596619780"
 target="_blank">
-Message Now
+
+Message
+
 </a>
 
 </div>
 
+
+
+<!-- FACEBOOK -->
 
 <div class="contact-card">
 
-<div class="icon">f</div>
-<h3>Facebook</h3>
+<div class="icon">
+f
+</div>
 
-<p>Facebook Page</p>
+<h3>
+Facebook
+</h3>
 
-<a class="facebook"
+<p>
+Facebook Page
+</p>
+
+<a
+class="facebook"
 href="https://www.facebook.com/share/1GN4spj3GK/"
 target="_blank">
+
 Visit Page
+
 </a>
 
 </div>
 
+
 </div>
+
 </div>
+
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
 <div class="footer-name">
 ॐ Pandit Rakesh Ji ॐ
 </div>
 
-<p>Satsang • Jagran • Hawan • Ramayan Path</p>
+<p>
+Satsang • Jagran • Hawan • Ramayan Path
+</p>
+
 
 <div class="footer-icons">
 
-<a class="whatsapp"
+
+<a
+class="whatsapp"
 href="https://wa.me/919596619780"
 target="_blank">
 💬
 </a>
 
-<a class="call"
+
+<a
+class="call"
 href="tel:9596619780">
 📞
 </a>
 
-<a class="facebook"
+
+<a
+class="facebook"
 href="https://www.facebook.com/share/1GN4spj3GK/"
 target="_blank">
 f
 </a>
 
-<a class="maps"
+
+<a
+class="maps"
 href="https://www.google.com/maps/search/?api=1&query=High+School+Gagrote+Nowshera+Rajouri"
 target="_blank">
 📍
 </a>
 
+
 </div>
 
-<p>© 2026 Pandit Rakesh Ji • All Rights Reserved</p>
-<p>॥ जय श्री राम ॥</p>
+
+<p>
+© 2026 Pandit Rakesh Ji • All Rights Reserved
+</p>
+
+<p>
+॥ जय श्री राम ॥
+</p>
 
 </footer>
 
 
+
 <!-- FLOATING WHATSAPP -->
-<a class="float-wa"
+
+<a
+class="float-wa"
 href="https://wa.me/919596619780"
-target="_blank">
+target="_blank"
+title="WhatsApp">
+
 💬
+
 </a>
+
 
 </body>
 </html>
